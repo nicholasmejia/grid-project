@@ -1,0 +1,18 @@
+<div class="container mx-auto">
+  <ktd-grid [cols]="cols"
+            [rowHeight]="rowHeight"
+            [layout]="layout"
+            (layoutUpdated)="onLayoutUpdated($event)">
+    <ktd-grid-item class="" *ngFor="let item of layout; trackBy:trackById" [id]="item.id">
+      <!-- Your grid item content goes here -->
+      <div class="bg-cyan-500 m-4">
+        <h3>I am an item!</h3>
+        <p>Here is some content, ya filthy animal</p>
+      </div>
+      <!-- Optional Custom placeholder template -->
+      <ng-template ktdGridItemPlaceholder>
+        <!-- Custom placeholder content goes here -->
+      </ng-template>
+    </ktd-grid-item>
+  </ktd-grid>
+</div>
